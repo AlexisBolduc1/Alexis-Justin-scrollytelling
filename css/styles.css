@@ -1,0 +1,512 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Identification */
+
+ul.technique-gsap {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 10px;
+  font-family: monospace;
+  font-weight: 400;
+  width: auto;
+  display: inline-block;
+  padding: 10px 20px 12px 20px;
+  margin: 0;
+  max-width: 300px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+}
+
+ul.technique-gsap li {
+  margin: 5px 0;
+}
+
+/* Général */
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --turquoise: #c0fdff;
+  --mauve: #deaaff;
+  --rose: #ffcbf2;
+  --mauvep: #d0d1ff;
+  --bleu: #c8e7ff;
+  --jaune: #ffea00;
+  --blanc: white;
+}
+
+@font-face {
+  src: url("../police/DreamMiraclessRegular.ttf") format("truetype");
+  font-family: "miracless";
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../police/DreamNight.ttf") format("truetype");
+  font-family: "Night";
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../police/OnceUponADream.ttf") format("truetype");
+  font-family: "once";
+  font-display: swap;
+}
+
+header {
+  display: block;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/img_arriere_plan/scene1_fond.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+section {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5vw;
+  color: var(--blanc);
+  font-family: "Night";
+  font-weight: 100;
+  -webkit-text-stroke: var(--jaune) 1px;
+  padding: 20px;
+  margin: 0;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0px;
+  font-size: 20px;
+  text-align: center;
+  font-family: "once";
+  color: black;
+  -webkit-text-stroke: var(--mauve) 0.3px;
+}
+
+#scene1 {
+  background-image: url("../img_optimise/img_arriere_plan/scene1_fond_long_optimise.svg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 50% 0%;
+}
+
+#scene2 {
+  background-image: url("../img_optimise/img_arriere_plan/scene2_optimise.svg");
+  position: relative;
+}
+
+#scene3 {
+  background-image: url("../img_optimise/img_arriere_plan/scene3_optimise.svg");
+  position: relative;
+}
+
+#scene4 {
+  background-image: url("../img_optimise/img_arriere_plan/scene4_optimise.svg");
+  position: relative;
+}
+
+#scene5 {
+  background-image: url("../img_optimise/img_arriere_plan/scene5_optimise.svg");
+  position: relative;
+}
+
+#scene6 {
+  position: relative;
+  background-color: black;
+}
+
+#scene7 {
+  background-image: url("../img_optimise/img_arriere_plan/scene6_optimise.svg");
+  position: relative;
+  z-index: 1;
+}
+
+.scroll {
+  text-align: center;
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  font-size: 20px;
+  font-family: "Night";
+}
+
+.defilez {
+  display: block;
+  color: black;
+  -webkit-text-stroke: var(--mauve) 1px;
+  text-align: center;
+}
+
+.fleche {
+  display: block;
+  color: black;
+  -webkit-text-stroke: var(--mauve) 1px;
+  text-align: center;
+}
+
+/* Spritesheet */
+
+.spritesheet {
+  aspect-ratio: 1/1;
+  width: 400px;
+  background-size: cover;
+  background-position: center bottom;
+
+  background-image: url("../img_optimise/img_elements_visuels/spritesheet_cascade_optimise.png");
+
+  animation-name: sprite;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(45);
+
+  margin: 0 auto;
+  background-size: 4500%;
+  animation-play-state: paused;
+}
+
+.spritesheet_nuage {
+  position: absolute;
+  top: -20vh;
+  width: 100vw;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  background-position: center bottom;
+
+  background-image: url("../img_optimise/img_elements_visuels/spritesheet_nuage_optimise.png");
+
+  animation-name: sprite;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(45);
+
+  margin: 0 auto;
+  background-size: 4500%;
+  animation-play-state: paused;
+}
+
+@keyframes sprite {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -4500% 0;
+  }
+}
+
+body.is-scrolling .spritesheet {
+  animation-play-state: running;
+}
+
+body.is-scrolling .spritesheet_nuage {
+  animation-play-state: running;
+}
+
+/* scène 1 */
+
+.boule1 {
+  position: absolute;
+  width: 20vw;
+  z-index: 3;
+  transform: rotate(-45deg);
+  top: 10vh;
+  left: 10vw;
+}
+
+.ile {
+  width: 50vw;
+  position: absolute;
+  left: 20vw;
+  bottom: 15vh;
+  z-index: 1;
+}
+
+.montagne {
+  position: absolute;
+  bottom: 0vh;
+}
+
+.nuages {
+  position: absolute;
+  bottom: 10vh;
+  z-index: 2;
+}
+
+.textscene1 {
+  position: relative;
+  margin: 0px;
+  font-family: "once";
+  background-color: var(--mauve);
+  font-size: 5vw;
+  color: var(--blanc);
+  text-align: center;
+  z-index: 3;
+}
+
+/* scène 2 */
+
+.boule2 {
+  position: absolute;
+  width: 20vw;
+  z-index: 1;
+  transform: rotate(45deg);
+  top: 10vh;
+  right: 10vw;
+}
+
+.fun {
+  position: absolute;
+  width: 100vw;
+  top: 10vh;
+}
+
+.textscene2 {
+  margin: 0px;
+  font-family: "once";
+  background-color: var(--mauve);
+  font-size: 5vw;
+  color: var(--blanc);
+  text-align: center;
+}
+
+/* scène 3 */
+
+.boule3 {
+  position: absolute;
+  width: 20vw;
+  z-index: 1;
+  transform: rotate(45deg);
+  top: 10vh;
+  right: 10vw;
+}
+
+.sit {
+  position: absolute;
+  width: 140px;
+  bottom: 15vh;
+  right: 50vw;
+  position: center;
+  z-index: 1;
+}
+
+.textscene3 {
+  margin: 0px;
+  font-family: "once";
+  background-color: var(--mauve);
+  font-size: 5vw;
+  color: var(--blanc);
+  text-align: center;
+}
+
+.toutou{
+  position: absolute;
+  width:20vw;
+  bottom:0vh;
+  left:20vw;
+}
+
+.ballejouet{
+  position: absolute;
+  width:20vw;
+  bottom:10vh;
+  right:0vw;
+}
+
+.voiturejouet{
+  position: absolute;
+  width:20vw;
+  bottom:0vh;
+  right:20vw;
+}
+
+.bloc{
+  position: absolute;
+  width:20vw;
+  bottom:10vh;
+  left:0vw;
+}
+
+/* scène 4 */
+
+.boule4 {
+  position: absolute;
+  width: 20vw;
+  z-index: 1;
+  transform: rotate(45deg);
+  top: 10vh;
+  right: 10vw;
+}
+
+.stand {
+  position: absolute;
+  width: 10vw;
+  bottom: 0vh;
+  right: 10vw;
+}
+
+.standing {
+  position: absolute;
+  height: 30vw;
+  bottom: 8vh;
+  right: 35vw;
+}
+
+.voiture1 {
+  position: absolute;
+  width: 40vw;
+  bottom: 15vh;
+  right: 42vw;
+  position: center;
+  transform: rotate(25deg);
+}
+
+.voiture2 {
+  position: absolute;
+  width: 40vw;
+  bottom: 20vh;
+  right: 10vw;
+  position: center;
+  transform: rotate(-25deg) scaleX(-1);
+}
+
+.textscene4 {
+  margin: 0px;
+  font-family: "Night";
+  background-color: var(--mauve);
+  font-size: 5vw;
+  color: var(--blanc);
+  text-align: center;
+}
+
+/* scène 5 */
+
+.boule5 {
+  position: absolute;
+  width: 20vw;
+  z-index: 1;
+  transform: rotate(45deg);
+  top: 10vh;
+  right: 10vw;
+  opacity:0;
+}
+
+.angle {
+  position: absolute;
+  width: 10vw;
+  bottom: 0vh;
+  right: 10vw;
+}
+
+.manshot {
+  position: absolute;
+  height: 30vw;
+  bottom: 8vh;
+  left: 10vw;
+}
+
+.scared {
+  position: absolute;
+  height: 30vw;
+  bottom: 8vh;
+  right: 35vw;
+}
+
+#rond {
+  position: absolute;
+  height: 3vw;
+  bottom: 25%;
+  right: 35vw;
+}
+
+#balle {
+  position: absolute;
+  height: 3vw;
+  bottom: 25%;
+  right: 35vw;
+  visibility:hidden;
+}
+
+.textscene5 {
+  margin: 0px;
+  font-family: "Night";
+  background-color: var(--mauve);
+  font-size: 5vw;
+  color: var(--blanc);
+  text-align: center;
+}
+
+/* scène 6 */
+
+.boule6 {
+  position: absolute;
+  z-index: 1;
+  width: 50vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textscene6 {
+  position: relative;
+  margin: 0px;
+  padding: 10vh;
+  font-family: "miracless";
+  font-size: 4vh;
+  color: var(--blanc);
+  text-align: center;
+  z-index: 1;
+}
+
+/* scène 7 */
+
+.textscene71 {
+  margin: 0px;
+  font-family: "miracless";
+  font-size: 6vh;
+  color: var(--turquoise);
+  text-align: center;
+  -webkit-text-stroke: black 0.2px;
+}
+
+.textscene72 {
+  position: relative;
+  top: 50vh;
+  margin: 0px;
+  font-family: "miracless";
+  font-size: 6vh;
+  color: var(--turquoise);
+  -webkit-text-stroke: black 0.2px;
+  text-align: center;
+}
