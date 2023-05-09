@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" class="icon" type="img/story-icon" href="img/icon.jpg">
+    <title>Mélancolie inconsciente</title>
+</head>
+
+<body>
+    <header>
+        <h1> Mélancolie inconsciente </h1>
+        <p class="copyright"> « Projet cree dans le cadre du cours Optimisation Web - Integration multimedia - College
+            Montmorency.
+            © 2023 - Conception : Marie-Michelle Ouellet et Alexis Bolduc| Developpement Web : Marie-Michelle Ouellet. »
+        </p>
+        <p class="scroll">
+            <span class="defilez">Défilez la page</span>
+            <span class="fleche">↓</span>
+        </p>
+        
+    </header>
+
+    <main>
+        <section id="scene1">
+            <p class="textscene1">Bienvenue dans les souvenirs de notre enfant, venez nous allons faire un tour!
+            </p>
+            <ul class="technique-gsap"> 
+                <li>Parallax</li> 
+                <li>MotionPath</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>#scene1</li> 
+                        <li>pin=true, afin que le chapitre reste collé, le temps de l'animation</li>
+                        <li>scrub=true, afin que le parallax et le MotionPath suivent le scroll</li>
+                    </ul> 
+                </li> 
+            </ul> 
+
+            <img class="ile" src="/img/img_arriere_plan/scene1_ile.svg" alt="ile" >
+            <img class="boule1" src="/img/img_elements_visuels/boule.svg" alt="boule">
+            <img class="montagne" src="/img/img_arriere_plan/scene1_montagne.svg" alt="montagne">
+            <img class="nuages" src="/img/img_arriere_plan/scene1_nuages.svg" alt="nuages">
+            
+        </section>
+
+        <section id="scene2">
+            <!-- P2.2 B - INSTRUCTIONS 4 -->
+            <ul class="technique-gsap"> 
+                <li>Timeline de 2 étapes</li> 
+                <li>Anim sur la position sur position x y et rotation</li> 
+                <li>Spritesheet (s'anime que si body contient la classe .is-scrolling)</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>#scene2</li> 
+                        <li>pin=true, afin que le chapitre reste collé, le temps de l'animation</li>
+                        <li>scrub=true, afin que les animations suivent le scroll</li> 
+                    </ul> 
+                </li> 
+            </ul> 
+
+            <img class="fun" src="/img/img_personnages/boy-fun.svg" alt="Garçon qui a du plaisir">
+            <img class="boule2" src="/img/img_elements_visuels/boule.svg" alt="boule">
+            <p class="textscene2">Certains souvenirs sont faux.
+            <div class="spritesheet"></div>
+            </p>
+        </section>
+
+        <section id="scene3">
+            <ul class="technique-gsap">
+                <li>Timeline de 2 éléments</li> 
+                <li>Anim sur la position sur position x </li> 
+                <li>DrawSVG</li> 
+                <li>repeat à l'infini et yoyo: true pour l'animation de la boule (OnEnter, OnLeaveBack)</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>#scene3</li> 
+                        <li>pin=true, afin que le chapitre reste collé, le temps de l'animation</li>
+                        <li>scrub=true, afin que les animations suivent le scroll</li> 
+                    </ul> 
+                </li> 
+            </ul> 
+
+            <img class="boule3" src="/img/img_elements_visuels/boule.svg" alt="boule">
+            <!-- P2.2 B - INSTRUCTIONS 4 -->
+            <img class="sit" src="/img/img_personnages/boy-sit.png" alt="Garçon qui est assis">
+            <!-- script draw svg a inséré -->
+            <div class="toutou"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080" xml:space="preserve"><style>.st0{display:none}.st2,.st3{display:inline;fill:#ffcbf2}.st3{fill:#847e7a}.st4,.st5,.st6{display:inline;fill:#eaf3f0}.st5,.st6{fill:#928581}.st6{fill:#c0fdff}.st7,.st8,.st9{display:inline;fill:#d0d1ff}.st8,.st9{fill:#deaaff}.st9{fill:#c8e7ff}.st10{fill:#509980}.st10,.st11,.st13{display:inline}.st11{fill:none;stroke:#000;stroke-width:2.2536;stroke-miterlimit:10}.st13{fill:#e3ad86}.st15,.st16,.st17{display:inline;fill:#fde7cf}.st16,.st17{fill:#7d95d6}.st17{fill:#f5d7c0}.st18,.st19,.st20{display:inline;fill:#e16b79}.st19,.st20{fill:#61ad8e}.st20{fill:#a29793}.st23{fill:none;stroke:#000;stroke-width:2.2536;stroke-miterlimit:10}</style><g id="Calque_4"><path id="trace" class="st23" d="M681.03 476.62c160.84-210.15 374-94.44 606.49-76.71-150.09-105.29-116.36-194.36-35.24-283.96 88.74-98.09 188.34-118.61 299.75-56.62 19.45 10.85 36.42 20.74 58.77 17.73 73.49 18.48 104.86 58.45 53.61 126.13-35.35 46.52-22.56 106.69-53.5 152.89-50.5 14.4-76.6 44.91-75.53 100.24 1.61 86.27-27.93 163.95-73.81 236.04-2.26-46.95-4.62-93.79-6.98-140.74-2.04-39.64 22.35-92.93-40.93-104.32-50.17-9.02-77.14 29.01-97.45 68.44-51.57 100.46-57.16 213.27-84.98 320.06-127.31-2.58-254.52-5.26-381.95-7.84 53.5-34.49 152.03-26.75 143.22-120.87-7.63-82.19-81.33-117.22-153.32-138.17-48.02-13.97-99.7-14.93-148.8-25.79-57.06-12.36-18.38-42.44-9.35-66.51zm755.61-306.3c-.97-40.83-5.8-82.94-59.31-79.29-77.89 5.26-88.53 69.3-99.27 128.5-8.6 47.49 24.93 60.6 61.88 58.98 66.94-3.01 99.28-41.37 96.7-108.19z"/><path id="trace" class="st23" d="M681.03 476.62c-9.02 24.17-47.7 54.15 9.45 66.72 49.1 10.74 100.78 11.82 148.8 25.79 71.98 20.95 145.69 56.08 153.32 138.17 8.81 94.01-89.71 86.38-143.22 120.87-203.38 2.04-406.76 35.03-610.47 3.44-63.5-97.55-68.44-199.51 8.81-286.22 71.55-80.15 155.25-148.91 280.95-90.14 44.49 20.73 101.22 15.04 152.36 21.37zM1231.33 836.01c27.83-106.9 33.31-219.71 84.98-320.06 20.31-39.54 47.27-77.46 97.45-68.44 63.28 11.28 38.89 64.68 40.93 104.32 2.36 46.95 4.62 93.79 6.88 140.74 0 55.98-9.45 113.03 19.88 165.46-12.78 41.47-16.22 83.16-2.36 125.06-80.9 66.5-162.02 55.76-243.13.43-1.52-49.21-3.13-98.41-4.63-147.51z"/></g></svg></div>
+            <div class="ballejouet"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080" xml:space="preserve"><style>.st0{display:none}.st2,.st3{display:inline;fill:#ffcbf2}.st3{fill:#847e7a}.st4,.st5,.st6{display:inline;fill:#eaf3f0}.st5,.st6{fill:#928581}.st6{fill:#c0fdff}.st7,.st8,.st9{display:inline;fill:#d0d1ff}.st8,.st9{fill:#deaaff}.st9{fill:#c8e7ff}.st10{fill:#509980}.st10,.st11,.st13{display:inline}.st11{fill:none;stroke:#000;stroke-width:2.2536;stroke-miterlimit:10}.st13{fill:#e3ad86}.st15,.st16,.st17{display:inline;fill:#fde7cf}.st16,.st17{fill:#7d95d6}.st17{fill:#f5d7c0}.st18,.st19,.st20{display:inline;fill:#e16b79}.st19,.st20{fill:#61ad8e}.st20{fill:#a29793}.st23{fill:none;stroke:#000;stroke-width:2.2536;stroke-miterlimit:10}</style><g id="Calque_6"><path id="trace" class="st23" d="M504.58 676.8c-52.6-79.28-38.8-166.78-17.35-248.08 46.12-174.51 178.83-276.5 337.39-333.21 150.96-53.99 403.92 16.51 461.32 176.46-133.96 324.5-443.63 484.94-781.36 404.83z"/><path id="trace" class="st23" d="M504.58 676.8c337.81 80.12 647.4-80.32 781.37-404.82 39.5 11.43 48.56 46.12 60.19 78.79-16.16 28.98-32.81 57.68-48.35 87.01-81.09 153.26-195.41 269.88-362.4 327.91-116.62 40.55-239.58 30.37-359.68 42.43-53.09-27.87-69.88-75.45-71.13-131.32z"/><path id="trace" class="st23" d="M662.86 921.53c-24.45-36.3-68.06-55.87-85.69-98.16 63.88 17.42 129.09 37.97 194.85 31.21 282.56-28.91 492.67-158.7 590.2-438.33 38.46 46.95 27.1 99.76 17.97 152.36-39.78 59.29-67.16 126.37-118.57 178.62C1128.15 883 962.9 942.71 776.97 955.04c-37.97-11.08-76.08-22.29-114.11-33.51z"/><path id="trace" class="st23" d="M1362.3 416.32c-97.53 279.64-307.71 409.42-590.2 438.33-65.76 6.76-130.97-13.79-194.85-31.21-.84-5.02-1.32-10.1-1.53-15.26 120.17-12.12 243.06-1.95 359.68-42.43 166.92-58.03 281.31-174.65 362.4-327.91 15.54-29.33 32.19-58.03 48.35-87.01 5.35 21.81 10.71 43.61 16.15 65.49z"/><path id="trace" class="st23" d="M1247.28 890.46c-118.85 89.73-252.4 121.08-399.04 101.15-28.21-3.83-64.23 8.57-71.13-36.5 185.94-12.4 351.18-72.1 484.66-207.81 51.41-52.25 78.72-119.34 118.57-178.62 24.73 110.28-45.42 186.28-97.32 268.84-11.43 18.04-35.81 27.23-35.74 52.94z"/></g></svg></div>
+            <div class="bloc"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080" xml:space="preserve"><style>.st0{display:none}.st2{display:inline;fill:#ffcbf2}.st3,.st4,.st5{display:inline;fill:#847e7a}.st4,.st5{fill:#eaf3f0}.st5{fill:#928581}.st6,.st7,.st8{display:inline;fill:#c0fdff}.st7,.st8{fill:#d0d1ff}.st8{fill:#deaaff}.st10,.st12,.st9{display:inline;fill:#c8e7ff}.st10,.st12{fill:#509980}.st12{fill:#e3ad86}.st14,.st15,.st16{display:inline;fill:#fde7cf}.st15,.st16{fill:#7d95d6}.st16{fill:#f5d7c0}.st17,.st18,.st19{display:inline;fill:#e16b79}.st18,.st19{fill:#61ad8e}.st19{fill:#a29793}.st21,.st23{fill:none;stroke:#000;stroke-width:2.2536;stroke-miterlimit:10}.st23{display:inline}</style><g id="Calque_7"><path id="trace" class="st21" d="M1155.72 877.13c-94.07 10.67-122.25-34.45-114.57-123.37 6.36-73.29-.09-147.61-.84-221.46.94-5.34 1.4-10.86 1.5-16.29 3.28-94.45 91.26-143.4 120.37-223.99 148.36-59.34 304.3-43.06 458.47-48.3 71.33-2.43 101.18 20.22 99.03 94.73-3.74 126.55-.09 253.38.37 380.12-115.32 105.4-239.72 183.93-407.45 157.91-50.92-8.05-104.46-.09-156.88.65zM817.07 558.14c-.47 98.56-.94 197.03-1.5 295.6-108.86 118.97-238.41 185.8-404.55 160.62-3.74-.28-7.49-.66-11.23-.84-262.09-7.96-264.8-7.96-260.31-267.14 1.31-74.7-38.66-165.96 29.48-222.31 106.99-88.46 230.64-144.8 377.97-110.45 28.27 6.65 58.97 3.09 88.55 4.21 96.6.18 202.09-11.24 181.59 140.31z"/><path id="trace" class="st21" d="M817.07 558.14c20.5-151.54-84.99-140.22-181.59-140.4 9.36-81.62-24.24-166.89 20.78-245.43 86.21 26.49 172.88-2.9 259.75 1.4 86.11 4.31 119.72 41.56 95.76 119.34-25.18 81.62-7.86 152.48 30.14 222.96-.09 5.52-.56 10.95-1.5 16.29-70.3 43.99-148.93 16.94-223.34 25.84z"/><path id="trace" class="st21" d="M1041.9 516.01c-38-70.48-55.32-141.34-30.14-222.96 24.06-77.78-9.55-115.04-95.76-119.34-86.86-4.31-173.54 25.18-259.75-1.4C781.13 15.52 955.23 70.28 1115.1 67.19c40.25-.75 39.78 37.07 40.9 67.58 1.97 52.42 4.12 104.74 6.18 157.16-29.01 80.59-117 129.54-120.28 224.08z"/><path id="trace" style="fill:none" d="M129.46 980.94V550.37"/></g></svg></div>
+            <div class="voiturejouet"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080" xml:space="preserve"><style>.st0{display:none}.st2,.st3{display:inline;fill:#ffcbf2}.st3{fill:#847e7a}.st4,.st5,.st6{display:inline;fill:#eaf3f0}.st5,.st6{fill:#928581}.st6{fill:#c0fdff}.st7,.st8,.st9{display:inline;fill:#d0d1ff}.st8,.st9{fill:#deaaff}.st9{fill:#c8e7ff}.st10{fill:#509980}.st10,.st11,.st13{display:inline}.st11{fill:none;stroke:#000;stroke-width:2.2536;stroke-miterlimit:10}.st13{fill:#e3ad86}.st15,.st16,.st17{display:inline;fill:#fde7cf}.st16,.st17{fill:#7d95d6}.st17{fill:#f5d7c0}.st18,.st19,.st20{display:inline;fill:#e16b79}.st19,.st20{fill:#61ad8e}.st20{fill:#a29793}.st23{fill:none;stroke:#000;stroke-width:2.2536;stroke-miterlimit:10}</style><g id="Calque_5"><path id="trace" class="st23" d="M601.4 781.31c-21.33 34.76-42.65 69.51-63.97 104.41-55.81 22.85-112.86 37.11-173.65 21.74-80.73-37.8-109.26-106.07-111.19-189.85 29.49-105.24 99.29-150.11 206.88-137.23 121.16 14.54 138.74 102.75 141.93 200.93zM1422.96 885.72c-13.02-34.48-26.03-68.96-39.05-103.44 7.2-116.59 41.54-209.37 183.48-203.14 129.89 5.68 166.17 89.32 165.2 202.59-22.71 35.73-45.56 71.45-68.27 107.18-80.73 19.24-161.6 54.69-241.36-3.19z"/><path id="trace" class="st23" d="M1732.59 781.72c.97-113.27-35.31-196.91-165.2-202.59-142.07-6.23-176.42 86.55-183.48 203.14-260.88-.28-521.77-.69-782.52-.97-3.18-98.18-20.77-186.39-141.8-200.93-107.59-12.87-177.38 32-206.87 137.24-98.18-1.8-208.27 23.68-194.97-143.18 7.34-92.09 35.17-132.66 128.37-125.87 55.25 4.02 111.06-1.11 166.58.97 136.26 4.85 274.32 27.69 250.22-192.34-9.28-84.33 190.96-166.86 277.78-117.84 69.24 39.19 108.29 54.7 184.72-6.92 95.27-76.71 207.57-1.94 195.52 129.61-15.09 164.78 57.33 202.73 201.62 188.6 88.07-8.72 177.94 2.91 266.42-2.49 99.29-6.09 146.64 30.33 136.26 133.35-9.13 90.69 40.72 218.64-132.65 200.22zM968.77 446.76c61.9-15.23 161.6 45.42 166.17-90.7 3.88-116.18-74.5-109.81-143.46-96.38-71.59 13.85-194-68.13-201.62 87.79-7.2 145.95 106.9 83.78 178.91 99.29z"/></g></svg></div>
+            <p class="textscene3">Mais une chose est sure...
+            </p>
+        </section>
+
+        <section id="scene4">
+            <ul class="technique-gsap"> 
+                <li>Timeline de 5 éléments</li> 
+                <li>Anim sur la position sur position x </li>
+                <li>Spritesheet(s'anime que si body contient la classe .is-scrolling)</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>#scene4</li>
+                        <li>pin=true, afin que le chapitre reste collé, le temps de l'animation</li>
+                        <li>scrub=true, afin que les animations suivent le scroll</li> 
+                    </ul> 
+                </li> 
+            </ul> 
+
+            <img class="boule4" src="/img/img_elements_visuels/boule.svg" alt="boule">
+            <!-- P2.2 B - INSTRUCTIONS 4 -->
+            <img class="stand" src="/img/img_personnages/boy-stand.png" alt="Garçon qui est debout">
+            <!-- P2.2 B - INSTRUCTIONS 4 -->
+            <img class="standing" src="/img/img_personnages/man-standing.png" alt="Homme qui est debout">
+            <!-- P2.2 B - INSTRUCTIONS 4 -->
+            <img class="voiture1" src="/img/img_elements_visuels/voiture.svg" alt="voiture">
+            <!-- P2.2 B - INSTRUCTIONS 4 -->
+            <img class="voiture2" src="/img/img_elements_visuels/voiture.svg" alt="voiture">
+            <p class="textscene4">Certains souvenirs nous procurent des émotions fortes.
+            </p>
+            <div class="spritesheet_nuage"></div>
+        </section>
+
+        <section id="scene5">
+            <ul class="technique-gsap"> 
+                <li>Timeline de 4 éléments</li> 
+                <li>Anim sur la position sur position x et skewX</li> 
+                <li>Morph SVG</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>#scene5</li>
+                        <li>pin=true, afin que le chapitre reste collé, le temps de l'animation</li> 
+                        <li>scrub=true, afin que les animations suivent le scroll</li>
+                        <li>scrub=false, pour l'animation qui ne suit pas le scroll</li>
+                        <li>toggleActions est paramétré pour faire en sorte que l'anim joue en entrant dans la section,
+                             joue à l'envers si on scroll-up, se complete après la section et
+                            revient au début si on remonte au dessus de la section</li>
+                    </ul> 
+                </li> 
+            </ul> 
+
+            <img class="boule5" src="/img/img_elements_visuels/boule.svg" alt="boule">
+            <!-- P2.2 B - INSTRUCTIONS 4 -->
+            <img class="angle" src="/img/img_personnages/boy-angle.png" alt="un enfant qui regarde">
+            <!-- P2.2 B - INSTRUCTIONS 4 -->
+            <img class="manshot" src="/img/img_personnages/man-gun.svg" alt="un homme qui tire">
+            <!-- P2.2 B - INSTRUCTIONS 4 -->
+            <img class="scared" src="/img/img_personnages/man-scared.png" alt="un homme qui a peur">
+            <div class="balle"><svg version="1.1" id="balle" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080" xml:space="preserve"><style>.st0{fill:#fff}</style><path id="pathballe" d="M828.45 733.62c-127.42 0-236.75.7-346.06-.79-15.41-.21-31.18-10.06-45.91-17.24-23.17-11.29-43.28-19.51-63.61 7.4-16.01 21.18-44.96 16.48-55.21-8.56-8.59-20.98-15.45-44.41-15.58-66.8-.51-93.25 1.32-186.53 3.62-279.77.34-13.97 6.22-28.43 12.11-41.51 17.12-38.02 30.69-37.81 63.12-11.53 10.86 8.81 34.87 4.58 52.07 1.62 24.23-4.18 47.71-18.52 71.5-18.49 212.53.22 425.78-7.36 637.33 7.95 141.24 10.22 290.11 7.35 418.4 90.78 47.22 30.71 79.02 66.26 79.31 125.19.28 57.56-31.31 92.03-79.45 115.49-89.18 43.48-181.22 71.74-282.44 74.18-155.8 3.77-311.41 14.96-449.2 22.08zm-385.5-143.17c5.33 29.41-22.33 65.82 24.59 67.84 79.88 3.44 160.02.68 240.04.89 130.85.34 261.7 1.34 392.55 1.04 19.06-.04 40.38-1.6 56.29-10.38 9.41-5.19 13.46-25.88 13.62-39.67.09-7.21-12.84-20.08-20.91-20.94-36.09-3.88-72.54-5.77-108.86-5.8-100.49-.08-200.99.71-301.48 1.93-97.38 1.18-194.77 3.32-295.84 5.09zm737.1 20.73c-.95 29.87 16.29 49.04 39.01 44.71 30.5-5.82 61.24-11.56 90.72-20.98 11.36-3.63 19.51-17.26 29.13-26.34-10.52-6.47-20.37-16.67-31.68-18.67-29.65-5.25-60.01-6.4-89.95-10.19-26.98-3.41-43.41 3.09-37.23 31.47zm-826.03 40.7c-9.98-21.87-18.92-41.47-27.86-61.08-6.44 12.27-17.38 24.22-18.31 36.9-1.53 20.98 6.21 38.95 46.17 24.18zm25.38-4.19c12.25-15.67 25.32-25.37 23.96-32.23-2.26-11.47-13.73-21.12-21.32-31.54-8.23 8.74-21.73 16.71-23.15 26.44-1.31 9.02 10.29 19.93 20.51 37.33zm886.06 42.69c-32.69-7.18-55.26-12.13-77.89-17.11-4.8 32.96 1.94 34.9 77.89 17.11z"/><path id="pathballe" class="st0" d="M442.95 590.45c101.07-1.78 198.45-3.91 295.85-5.09 100.49-1.22 200.99-2.02 301.48-1.93 36.32.03 72.77 1.92 108.86 5.8 8.07.87 20.99 13.73 20.91 20.94-.16 13.79-4.22 34.48-13.62 39.67-15.91 8.77-37.23 10.33-56.29 10.38-130.85.3-261.7-.71-392.55-1.04-80.03-.21-160.17 2.56-240.04-.89-46.93-2.02-19.26-38.43-24.6-67.84zM1180.05 611.18c-6.18-28.39 10.25-34.88 37.22-31.47 29.95 3.79 60.3 4.94 89.95 10.19 11.31 2 21.16 12.21 31.68 18.67-9.61 9.08-17.77 22.71-29.13 26.34-29.47 9.42-60.21 15.17-90.72 20.98-22.71 4.34-39.94-14.84-39-44.71zM354.02 651.88c-39.96 14.78-47.69-3.19-46.16-24.18.92-12.68 11.87-24.62 18.31-36.9 8.93 19.6 17.87 39.21 27.85 61.08zM379.4 647.69c-10.22-17.41-21.82-28.31-20.5-37.33 1.42-9.73 14.92-17.7 23.15-26.44 7.59 10.42 19.06 20.07 21.32 31.54 1.34 6.86-11.72 16.56-23.97 32.23zM1265.46 690.38c-75.95 17.79-82.7 15.85-77.86-17.1 22.61 4.97 45.18 9.92 77.86 17.1z"/></svg></div> 
+            <div class="rond"><svg id="rond" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080" xml:space="preserve"><circle id="pathrond" cx="970.8" cy="540" r="528.8" style="fill:#1d1d1b"/></svg></div>
+            <p class="textscene5">Certains souvenirs procurent des sentations réelles.
+            </p>
+        </section>
+
+        <section id="scene6">
+
+            <img class="boule6" src="/img/img_elements_visuels/boule.svg" alt="boule">
+            <p class="textscene6">Chaque histoire à son importance. <br>
+                On ne comprendra jamais la fin sans le début.
+            </p>
+        </section>
+
+        <section id="scene7">
+
+            <p class="textscene71"><span> Tu </span> es unique <br>
+                Tu dois<span> prendre </span> en compte tout les facteurs <br>
+                Chaque détail est important dans l'histoire de quelqu'un <br>
+            </p>
+            <p class="textscene72">
+                Ne juge jamais quelqu'un <br>
+                Personne ne <span> te </span> perçoit comme toi <br>
+                Car <br>
+                Lors de la nuit, les souvenirs ne font que se <span> réveiller </span><br>
+            </p>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
+    <!-- Plugiciels payants
+    <script src="https://assets.codepen.io/16327/DrawSVGPlugin3.min.js"></script>
+    <script src="https://assets.codepen.io/16327/MorphSVGPlugin3.min.js"></script>
+-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
