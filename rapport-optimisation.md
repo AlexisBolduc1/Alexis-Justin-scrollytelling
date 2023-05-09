@@ -11,6 +11,7 @@ Ex: Cache-Control: max-age=31536000
 Le max-age vient indiquer au naviguateur combien de temps (en secondes) il doit mettre en cache la ressource.
 ### Résultat
 J'ai essayer de rajouter le cache-control dans le head du html.
+Le problème ne s'est pas résolu puisque la requète doit être mise en tête de réponse HTTP pour mieux fonctionner.
 
 ## Problème #2
 ### Assurez-vous que le texte reste visible pendant le chargement de la police Web
@@ -20,6 +21,7 @@ Il faut ajouter aux font-face la fonction : font-display: swap;.
 Swap vient indiquer au naviguateur que le texte qui utilise la police doit être affiché immédiatement en utilisant une police par défaut, puis lorsque la police est charger, elle remplace la police par défaut.
 ### Résultat
 J'ai ajouter le font-display:swap; au 3 font-face de mon css.
+Cela a fonctionné et a réglé le problème.
 
 ## Problème #3
 ### Éviter les énormes charges utiles du réseau
@@ -28,3 +30,8 @@ Beaucoup d'images et de polices prennent beaucoup de temps à charger et il est 
 Minimiser les images et les fichiers afficher sur le site web.
 ### Résultat
 J'ai réduit la taille des images qui s'affichent sur le site web.
+La taille des fichiers à charger est passer de 8 175 Kio à 5,690 KiB
+
+## Rapport projet Scrollytelling après optimisation
+[PageSpeed Insights-Rapport du 9 Mai 2023, 7:19:53 PM](https://pagespeed.web.dev/analysis/https-alexisbolduc1-github-io-Alexis_Bolduc-scrollytelling/n52qcu6av3?form_factor=desktop)
+
