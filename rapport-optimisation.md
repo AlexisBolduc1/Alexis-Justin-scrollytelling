@@ -30,7 +30,7 @@ Beaucoup d'images et de polices prennent beaucoup de temps à charger et il est 
 Minimiser les images et les fichiers afficher sur le site web.
 ### Résultat
 J'ai réduit la taille des images qui s'affichent sur le site web.
-La taille des fichiers à charger est passer de 8 175 Kio à 5,690 KiB
+La taille des fichiers à charger est passer de 8,175 Kio à 5,690 KiB
 
 ## Rapport projet Scrollytelling après optimisation
 [PageSpeed Insights-Rapport du 9 Mai 2023, 7:19:53 PM](https://pagespeed.web.dev/analysis/https-alexisbolduc1-github-io-Alexis_Bolduc-scrollytelling/n52qcu6av3?form_factor=desktop)
