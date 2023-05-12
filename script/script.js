@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
-/* gsap.registerPlugin(DrawSVGPlugin);
-gsap.registerPlugin(MorphSVGPlugin);*/
+gsap.registerPlugin(DrawSVGPlugin);
+gsap.registerPlugin(MorphSVGPlugin);
 
 gsap.fromTo(
   ".fleche",
@@ -110,7 +110,7 @@ gsap
   );
 
 /* Animation scène 3 */
-/*gsap.set("#trace", { drawSVG: "0% 0%" });*/
+gsap.set("#trace", { drawSVG: "0% 0%" });
 
 gsap
   .timeline({
@@ -123,7 +123,7 @@ gsap
     },
   })
   .from(".sit", { x: "-100vw", duration: 4, ease: "power4.out" })
-  /*.to("#trace", { drawSVG: "0% 100%", duration: 5, ease: "power1.inOut" });*/
+  .to("#trace", { drawSVG: "0% 100%", duration: 5, ease: "power1.inOut" });
 
   let animation3 = gsap.to(".boule3", {
     y: 100,
@@ -168,7 +168,7 @@ gsap
   .from(".voiture2", { x: "100vw", duration: 2, ease: "power4.out" }, "<");
 
 /* Animation scène 5 */
-/*MorphSVGPlugin.convertToPath("circle")*/
+MorphSVGPlugin.convertToPath("circle")
 
 gsap
   .timeline({
@@ -180,8 +180,8 @@ gsap
       start: "center center",
     },
   })
-  /*.to("#pathrond", {duration: 3, 
-    morphSVG:{shape:"#pathballe", shapeIndex:20}})*/
+.to("#pathrond", {duration: 3, 
+    morphSVG:{shape:"#pathballe", shapeIndex:20}})
   .from(".angle", { x: "-100vw", duration: 2, ease: "slow(0.7, 0.7, false)" })
   .from(".scared", {
     x: "100vw",
